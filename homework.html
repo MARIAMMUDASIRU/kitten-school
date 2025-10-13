@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>homework 1</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      p1 {
+        font-size: 40px;
+      }
+      p2 {
+        color: #1b59d1;
+        font-size: 30px;
+      }
+      p3 {
+        font-size: 25px;
+      }
+      p4 {
+        font-weight: lighter;
+      }
+      p5 {
+        font-weight: lighter;
+      }
+      p6 {
+        font-weight: lighter;
+      }
+      h3:hover {
+        background: #f7ecea;
+        border-radius: 30px;
+        padding: 5px;
+        margin: 10px;
+      }
+      h4:hover {
+        background: #f7ecea;
+        border-radius: 30px;
+        padding: 5px;
+        margin: 10px;
+      }
+      h5:hover {
+        background: #f7ecea;
+        border-radius: 30px;
+        padding: 5px;
+        margin: 10px;
+      }
+
+      button {
+        color: #ffffff;
+        background: #1b58cf;
+        padding: 10px;
+        border-radius: 30px;
+      }
+
+      button:hover {
+        color: #000000;
+        background: #a81b1b;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <p1>🌤</p1>
+      <br />
+      <p2>
+        <strong>Currently 21° in Tokyo</strong>
+      </p2>
+    </h1>
+    <p3>13° / <strong> 23°</strong></p3>
+    <br />
+    <h3>🌧 Tomorrow<br /><br /><p4>10° / 22°</p4></h3>
+    <h4>⛅Saturday<br /><br /><p5>15° / 17°</p5></h4>
+    <h5>☀ Sunday<br /><br /><p6>25° / 28°</p6></h5>
+    <h6>
+      <button>Change city</button>
+    </h6>
+    <div><em>Coded by Mariam Mudasiru</em></div>
+    <script>
+      function changeCity() {
+        let city = prompt("What city are you currently in?");
+        let weather = prompt("What is todays weather?");
+        let heading = document.querySelector("h1");
+
+        if (weather >= 30) {
+          heading.innerHTML = "🥵 It's currently " + weather + "° in " + city;
+        } else if (weather <= 10) {
+          heading.innerHTML = "🥶 It's currently " + weather + "° in " + city;
+        } else {
+          heading.innerHTML = "😎 It's currently " + weather + "° in " + city;
+        }
+      }
+
+      let changeCityButton = document.querySelector("button");
+
+      changeCityButton.addEventListener("click", changeCity);
+    </script>
+  </body>
+</html>
